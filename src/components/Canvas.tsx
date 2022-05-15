@@ -6,6 +6,7 @@ function BreakOut(){
   const router = useRouter()
   //const canvasRef = useRef<HTMLCanvasElement>(document.createElement("canvas"))
 
+  //let canvasRef = useRef<HTMLCanvasElement>(document.createElement("canvas"));
   let canvasRef:any;
   if (typeof document !== "undefined") {
     canvasRef = useRef<HTMLCanvasElement>(document.createElement("canvas"))!
@@ -14,6 +15,15 @@ function BreakOut(){
 
     const canvas = canvasRef.current
     const ctx = canvasRef.current.getContext('2d')!
+
+    // ctx.fillStyle = "green";
+    // ctx.beginPath();
+    // ctx.arc(50, 100, 20, 0, 2 * Math.PI);
+    // ctx.fill();
+    // ctx.stroke();
+
+    // var canvas = document.getElementById("myCanvas");
+    // var ctx = canvas.getContext("2d");
 
     var x = canvas.width/2;
     var y = canvas.height-30;
@@ -188,7 +198,9 @@ function BreakOut(){
   }
 
   useEffect(()=>{
+    
     draw();
+
   },[])
 
   return (  
