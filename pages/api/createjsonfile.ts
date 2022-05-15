@@ -17,6 +17,6 @@ export default function handler(
     if (err) throw err;
         console.log('Saved!', JSON.stringify(JSON.parse(michelo)));
     });
-
+    console.log('Something!', JSON.stringify(JSON.parse(michelo)));
     res.status(200).json({ message: 'file created' })
 }
