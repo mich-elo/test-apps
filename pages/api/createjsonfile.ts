@@ -13,7 +13,7 @@ export default function handler(
 
     var michelo = "{ \"employee\" : { \"name\" : \"Michelo\" } }"
 
-    fs.appendFile('data/michelo.json', JSON.stringify(JSON.parse(michelo)), function (err:any) {
+    fs.appendFile('michelo.json', JSON.stringify(JSON.parse(michelo)), function (err:any) {
     if (err) throw err;
         console.log('Saved!');
     });
