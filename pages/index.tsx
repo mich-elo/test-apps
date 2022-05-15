@@ -1,15 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
+import testjson from '../data/test.json'
 
 function BreakOut(){
   const [canvas, setCanvas] = useState<HTMLCanvasElement>()
   const router = useRouter()
   //const canvasRef = useRef<HTMLCanvasElement>(document.createElement("canvas"))
 
-  let canvasRef:any;
-  if (typeof document !== "undefined") {
-    canvasRef = useRef<HTMLCanvasElement>(document.createElement("canvas"))!
-  }
+  let canvasRef:any =  useRef<HTMLCanvasElement>()!;
+//   if (typeof document !== "undefined") {
+//     canvasRef = useRef<HTMLCanvasElement>(document.createElement("canvas"))!
+//   }
+
   const draw = () => {  
 
     const canvas = canvasRef.current
