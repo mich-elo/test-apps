@@ -1,8 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-export default function handler(
-  req,
-  res) {
+exports.handler = async function(event, context) {
     var fs = require('fs');
 
     var michelo = "{ \"employee\" : { \"name\" : \"Michelo\" } }"
@@ -11,6 +9,4 @@ export default function handler(
     if (err) throw err;
         console.log('Saved!');
     });
-
-    res.status(200).json({ message: 'file created' })
 }
