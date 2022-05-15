@@ -15,7 +15,7 @@ export default function handler(
 
     fs.appendFile('data/michelo.json', JSON.stringify(JSON.parse(michelo)), function (err:any) {
     if (err) throw err;
-        console.log('Saved!');
+        console.log('Saved!', JSON.stringify(JSON.parse(michelo)));
     });
 
     res.status(200).json({ message: 'file created' })
