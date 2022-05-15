@@ -14,9 +14,11 @@ export default function handler(
     var michelo = "{ \"employee\" : { \"name\" : \"Michelo\" } }"
 
     fs.appendFile('data/michelo.json', JSON.stringify(JSON.parse(michelo)), function (err:any) {
-    if (err) throw err;
-        console.log('Saved!', JSON.stringify(JSON.parse(michelo)));
-    });
-    console.log('Something!', JSON.stringify(JSON.parse(michelo)));
-    res.status(200).json({ message: 'file created' })
+    if(err){
+      res.status(200).json({ message: 'file error' })
+    }
+    else{
+      res.status(200).json({ message: 'file has created' })
+    }
+    }); 
 }
