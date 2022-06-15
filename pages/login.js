@@ -1,4 +1,3 @@
-import MovingBackground from '../src/components/MovingBackground';
 
 export default function Login(){
     return(
